@@ -14,7 +14,17 @@ h5,
 h6 {
     line-height: 1.1;
     text-wrap: balance;
+}
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+article>h2:hover {
+    border-left: 0.3em solid var(--color-accent);
+    padding-left: 0.5em;
+    background-color: oklch(from var(--color-accent) 95% 5% h);
 }
 
 body {
@@ -33,15 +43,13 @@ nav {
     border-bottom-color: oklch(80% 3% 200);
 }
 
-a {
-    text-decoration: none;
+nav>a {
     flex: 1;
-    color: inherit;
     text-align: center;
     padding: 0.5em;
 }
 
-a:hover {
+nav>a:hover {
     border-bottom-width: 0.3em;
     border-bottom-style: solid;
     border-bottom-color: var(--color-accent);

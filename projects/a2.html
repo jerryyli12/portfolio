@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Vis & Society Assignment 2</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 2</small>
+			Exploratory Data Analysis
+		</h1>
+
+		<p>
+			<strong>Jerry Li</strong> — <em>jerryli@mit.edu</em>
+		</p>
+	</header>
+	<main>
+		<section>
+			<h2>Subtheme: Exclusionary Zoning</h2>
+
+			<h3>Overall Analysis Questions</h3>
+			<ol>
+				<li>Which regions in Boston have the most exclusionary zoning? This question is motivated by the New
+					York Times visualizations, which show the single-family zoning in other cities across the US, and
+					it's
+					also generally the primary focus of this subtheme.</li>
+				<li>How do demographics differ in areas zoned for single-family housing vs. not; e.g., who is being
+					"excluded" by exclusionary zoning? The provided reading "Exclusionary by Design" argues that zoning
+					has, throughout history, been used as a tool of race and class exclusion in Boston. With this
+					question, I hope to determine if the data continues to support this argument.</li>
+				<li>Where might there be the best opportunities for upzoning? This question is motivated by personal
+					interest and past experience. In 11.001, my group visited Alewife - the terminus of the red line -
+					and argued in favor of transit-oriented, affordable development in the area. I'm curious what the
+					data says regarding opportunities for upzoning in this region and in others in Boston.
+				</li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>Discoveries & Insights</h2>
+
+			<figure>
+				<img src="a2_images/vis1.png" alt="" width="100%" />
+				<figcaption>
+					To get a general sense of the data and to begin to understand what regions of Boston have the most
+					exclusionary zoning, this first visualization simply plots the percentage of residential land which
+					is zoned only for single-family homes in each municipality. It's clear that from municipality to
+					municipality, the zoning differs substantially, with some municipalities zoned entirely for
+					single-family homes but others with no exclusionary zoning. At first, I was concerned of a data
+					quality issue due to the zero values. However, examining the original MAPC data source informed me
+					that - aside from a strange Lynnfield observation - the zero values are likely correct, with those
+					municipalities
+					allowing for multifamily developments by special permit. I've also used color to indicate MBTA
+					communities, as this is an interesting direction to investigate later - for now, what we see is that
+					the vast majority of Boston municipalities are serviced by the MBTA.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="a2_images/vis2.png" alt="" width="100%" />
+				<figcaption>
+					Inspired by the New York Times graphics, this map shows, spatially, the regions zoned for
+					single-family homes only vs. not. It's an interesting visualization to me because Boston's
+					exclusionary zoning appears less "structured" than other cities. In a broad statement, it appears
+					that individual municipalities have reasonable jurisdiction over their zoning, so neighboring
+					municipalities can have very different zoning and overall trends are
+					not immediately clear. However, some standard observations
+					do emerge. The downtown areas are generally zoned to allow multifamily units, as well as small
+					pockets
+					in the suburbs, presumably higher-density town and transit centers.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="a2_images/vis3.png" alt="" width="100%" />
+				<figcaption>
+					Now, we begin investigating the demographic data. This first set of three charts plots the
+					distributions of household income, ethnicity, and age in the Boston area. The goal of this
+					visualization is to help understand the data distribution and serves primarily as a data quality
+					check. We see that the income distribution seems to reasonably reflect reality, with a large
+					increase around the minimum wage mark, and otherwise a somewhat normal distribution with the right
+					tail bucketed together. Likewise, the ethnicity and age distributions are as expected, affirming
+					that no severe data quality issues are present. I've also colored the charts by areas zoned for
+					single-family
+					vs. not, but again this is mostly for a data
+					quality check. Now, what we really want to clearly visualize is how these distributions differ in
+					single-family zones vs. otherwise.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="a2_images/vis4.png" alt="" width="100%" />
+				<figcaption>
+					This set of three charts is similar to the previous one, plotting the income, ethnicity, and age
+					distributions. However, here I've separated it out by single-family zoning vs. not, and normalized
+					them to visualize only the proportions. Now, the differing demographics are clearly shown. In the
+					first chart, we see that areas zoned exclusively for single-family homes have higher household
+					incomes (lower proportion of low incomes and higher proportion of high incomes). In the second
+					chart, we see that exclusionary zoning disproportionately affects African-American and Latino
+					populations, and the white population is much higher in single-family zones. The age distribution
+					generally shows more working-age people in non-exclusionary zones, which is logical. Given these
+					observations, what I wanted to know now was whether this trend of low-income, African-American and
+					Latino populations being disproportionately affected by exclusionary zoning held across
+					municipalities, or whether the observations here were the result of a few particular areas
+					(Simpson's paradox).
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="a2_images/vis5.png" alt="" width="100%" />
+				<figcaption>
+					To answer my question, I first generated a new measure of the percentage of households below the
+					poverty line (this is a bit of rough estimate - I used 25k, the poverty line for a household of 3).
+					I then plotted this measure across municipalities, split by single-family vs. not. What we can see
+					from the charts on the left is that, indeed, the trend of wealthier people in single-family zones
+					holds across municipalities - not just overall. Likewise, I created a measure of the percentage of
+					African-American and Latino population in each municipality; the trend of fewer such people in
+					single-family zones also
+					holds across municipalities. Therefore, we can start to reasonably argue that lower-income,
+					African-American and Hispanic people are the ones most affected by exclusionary zoning, which
+					reaffirms previous research.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="a2_images/vis6.png" alt="" width="100%" />
+				<figcaption>
+					To address my final question, I decided to introduce a measure not immediately apparent in the
+					original dataset: municipality area. This simply required imputing the area based on the provided
+					geometry. This chart plots the results, primarily as a data quality check (I did this first in
+					Tableau, which incorrectly imputed area for several municipalities) - indeed, manual checks with
+					Google and Google Maps confirms that areas are accurate.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="a2_images/vis7.png" alt="" width="50%" />
+				<figcaption>
+					With area, this allows us to calculate the measure that I'm after: population density. This chart
+					plots the population density of municipalities, separated by exclusionary zoning, just as I did with
+					the demographic data. We can see that areas zoned for single-family homes only are less dense than
+					those which are not. This confirms the basic observation that zoning which allows multifamily units
+					increases density.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="a2_images/vis8.png" alt="" width="100%" />
+				<figcaption>
+					We've now seen that multifamily zoning is correlated with higher diversity in terms of income and
+					ethnicity. We've also seen that multifamily zoning is correlated with higher density. This
+					visualization connects the loop back to affordable housing: does building denser actually correlate
+					to more
+					affordability? This dataset doesn't provide housing price data, but we can use incomes as a proxy -
+					if more lower income people live in the area, then it's likely to be more affordable. We see that,
+					indeed, higher density correlates to more diversity in income, with a larger percentage of the
+					population having lower incomes. An interesting observation is that - as seen in the second and
+					third charts - this trend holds not only overall, but even <em>when controlling for the zoning
+						type</em>, i.e. building denser - even if already not zoned for single-family only - is still
+					potentially beneficial.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="a2_images/vis9.png" alt="" width="70%" />
+				<figcaption>
+					And now finally, let's take a stab at the question: where might be the best opportunities for
+					upzoning? There are obviously many ways to approach this - most of which are beyond the scope of
+					this dataset and exercise. As a first attempt, I've filtered municipalities by ones which currently
+					use
+					exclusionary zoning and which are considered MBTA communities, as communities near transit would
+					benefit the most from upzoning. Then, in the chart I've plotted municipalities sorted by population
+					density - as this is a (very) rough metric for needing more housing - and colored by percentage
+					below the
+					poverty line - as this is a rough metric for affordability. Then, we can see that the
+					exclusionary-zoned areas in Revere, Watertown, Arlington, etc. might benefit the most from upzoning,
+					due to their high densities and high incomes (and yet their refusal to allow multifamily
+					developments).
+				</figcaption>
+			</figure>
+		</section>
+
+		<section>
+			<h2>Summary</h2>
+
+			<p>In summary, this exploratory visual analysis serves as a preliminary investigation into the Boston
+				single-family zoning dataset. I first found that - unlike in other cities - Boston's single-family zoned
+				areas are less patterned spatially, and the amount of land zoned for single-family homes differs wildly
+				from municipality to municipality. I then observed that exclusionary zoning in Boston disproportionately
+				affects lower-income, African-American and Latino populations. The trend held overall and across
+				individual municipalities. Furthermore, I established that areas in Boston which allow multifamily
+				development are higher
+				in density, and that higher density correlates with more diversity in income - even when controlling for
+				the zoning type. Finally, by looking at exclusionary-zoned MBTA communities with high income and high
+				density, I took a first step toward understanding where upzoning might help most.</p>
+		</section>
+	</main>
+</body>
+
+</html>
