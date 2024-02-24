@@ -21,10 +21,17 @@ a {
     color: inherit;
 }
 
+.color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 80%;
+}
+
 article>h2:hover {
     border-left: 0.3em solid var(--color-accent);
     padding-left: 0.5em;
-    background-color: oklch(from var(--color-accent) 95% 5% h);
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 body {
@@ -40,7 +47,8 @@ nav {
     margin-bottom: 1em;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: oklch(80% 3% 200);
+    --border-color: oklch(50% 10% 200 / 40%);
+    border-bottom-color: var(--border-color);
 }
 
 nav>a {
@@ -54,19 +62,20 @@ nav>a:hover {
     border-bottom-style: solid;
     border-bottom-color: var(--color-accent);
     padding-bottom: 0em;
-    background-color: oklch(from var(--color-accent) 95% 5% h)
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 .active {
     border-bottom-width: 0.3em;
     border-bottom-style: solid;
-    border-bottom-color: oklch(90% 3% 200);
+    border-bottom-color: var(--border-color);
     padding-bottom: 0em;
 }
 
 input,
 textarea,
-button {
+button,
+select {
     font: inherit;
 }
 
@@ -100,7 +109,6 @@ article {
     display: flex;
     align-items: start;
     justify-content: space-between;
-    /* background-color: oklch(90% 3% 200); */
     padding: 0.5em 1em;
 }
 
