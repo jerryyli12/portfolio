@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 3</small>
+			Visualization Design
+		</h1>
+
+		<p>
+			<strong>Jerry Li</strong> — <em>jerryli@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+		<section>
+			<h2>Phase One: Sketching Visualizations</h2>
+
+			<p>For this phase, I propose a broad motivating question: how has the US population distribution changed
+				from 1900 to 2000, and do the changes differ by gender?</p>
+
+			<figure>
+				<img src="a3_images/Page1.png" width="50%" alt="" />
+				<figcaption>
+					Population pyramid depicting US population age distribution in 1900 vs. 2000, separated by gender.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 1:
+			</p>
+
+			<ul>
+				<li>This type of visualization was the first to come to mind, as it's a common and effective way to
+					depict a population distribution. The reader can clearly see the distribution over both age and
+					gender.</li>
+				<li>I chose to include 1900 and 2000 on the same plot to depict the change over time, using an absolute
+					x-axis. This allows the reader
+					to see the absolute change in each bin, while still allowing the individual distributions to be
+					seen.</li>
+				<li>Overall, I think this sketch is very effective and helps answer my question: the US population is
+					aging, with much more of the population concentrated in the "middle-age" area. Two areas where this
+					visualization falls short is that the absolute (un-normalized) x-axis makes it difficult to compare
+					percentages, which the reader is probably more interested in instead. The second is that it's hard
+					to see differences in gender here, as the distributions really aren't that different. These issues
+					were the target focus of my second sketch.</li>
+			</ul>
+
+			<figure>
+				<img src="a3_images/Page2.png" width=60% alt="" />
+				<figcaption>
+					Heatmap showing the percent change in population from 1900 to 2000, grouped by age and gender.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 2:
+			</p>
+
+			<ul>
+				<li>In this sketch, I hoped to focus exclusively on relative (i.e. percent) changes in the distribution.
+					I also hoped to see clearer differences by gender.</li>
+				<li>This visualization is able to communicate what age groups (and of which genders) increased the most
+					in population relative to each other. And, if the reader is interested in comparing changes by
+					gender, it's easier to do so as they are directly adjacent (rather than having to compare
+					non-adjacent bars in the first sketch).</li>
+				<li>However, this sketch lost a lot of information pertinent to the original question. While we can see
+					the change in the population distribution, we cannot see either of the individual distributions from
+					1900 or 2000, nor can we see any absolute figures/changes. Moreover, as we discussed in lecture,
+					color saturation is probably not the most effective mark to use here, making this visualization
+					harder to read than the bars of sketch 1. Hence, for the last sketch, I decided to
+					revisit a closer design to sketch 1 while keeping the lessons from sketch 2 in mind.</li>
+			</ul>
+
+			<figure>
+				<img src="a3_images/Page3.png" width=50% alt="" />
+				<figcaption>
+					A radial pie chart showing the US population distribution in 1900 vs. 2000, with each slice
+					representing an age group. Apologies if the sketch is unclear, I was hoping to use opacity for the
+					colors, but this isn't an option on Notability.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 3:
+			</p>
+
+			<ul>
+				<li>For this sketch, I wanted to try to normalize the distributions so the reader can more easily make
+					relative comparisons between 1900 and 2000. I also decided to omit gender, as I wanted to focus on
+					the age distribution.</li>
+				<li>This visualization does the job, clearly allowing the reader to answer a question such as "how much
+					more of the population is of retirement age in 2000 vs. 1900"?</li>
+				<li>Nonetheless, I still felt flaws with this visualization. The circular shape is a debatable choice,
+					since age is not truly cyclic (though you could argue something about the "circle of life" here).
+					Moreover, the circular marks simply felt much more difficult to read; it's a lot harder to compare
+					between, say, the 0-4 age group and the 45-49 age group compared to sketch 1.
+				</li>
+			</ul>
+
+			<h3>Reflection</h3>
+
+			<p>
+				In summary, I sketched three different designs, a population pyramid, a heatmap, and a radial pie chart.
+				The population pyramid is generally easy to read and to make comparisons (especially between age
+				groups),
+				and it also shows the population distributions for both 1900 and 2000, which can help the reader draw
+				additional observations. However, it lacks in showing relative differences over time due to the absolute
+				x-axis. The heatmap was the solution to clearly show relative differences, so the reader could easily
+				answer something like "is more of the population today composed of adults than in 1900?" However, the
+				heatmap lost much of the important information, such as the individual population distributions
+				themselves, and the choice of mark made it difficult to read. Finally, the radial pie chart was a move
+				back toward sketch 1, but now still allowing the reader to easily make normalized, relative comparisons
+				between 1900
+				and 2000. However, like sketch 2, I felt it was more difficult to read and made some comparisons between
+				age groups more difficult. Hence, my general thought going into the next phase was to follow the general
+				design of sketch 1, while potentially synthesizing some aspects of the latter two sketches to improve
+				upon it.
+			</p>
+
+		</section>
+
+		<section>
+			<h2>Phase Two: Final Design</h2>
+
+			<figure>
+				<img src="a3_images/visualization.png" width="80%" alt="" />
+				<figcaption>
+					Population pyramids depicting the US population age distribution in 1900 vs. 2000, delineated by
+					gender.
+				</figcaption>
+			</figure>
+		</section>
+
+		<section>
+			<h2>Design Process & Design Decisions</h2>
+
+			<p>
+				For the final visualization, I decided to focus in on a more specific question than before: how much
+				older is the US population growing? Essentially, I wanted to make a visualization which best showed how
+				the population age distribution has changed, with much more of the population being middle-age and older
+				adults, and much less of the population being children. I chose to use a type of visualization commonly
+				known as a population pyramid, which is essentially two bar charts facing opposite directions. This is
+				the best choice for the data because of the binned age variable and the fact that bars
+				are the most effective mark for comparison across age bins. The reader can clearly see which age groups
+				are more or less represented in the population, enabling the identification of historical baby
+				booms. Furthermore, I chose to use two separate
+				facets for the temporal variable, 1900 vs. 2000. This is because, in my opinion, it is the best way to
+				allow for both relative and absolute comparison across time (the x-axis displays absolute values, and
+				the reader can see the relative shapes of the distributions clearly). Even at a brief glance, the reader
+				can immediately see that much more of the population in 2000 is comprised of middle-age adults, rather
+				than being predominantly children as in 1900. In terms of more minor design choices, I opted to use
+				a common
+				y-axis to make reading the visualization seamless. In terms of color, I chose red
+				and blue for female and male, respectively, as these are colors commonly
+				associated with the genders. Keeping a linear scale for the x-axis and sorting the age bins are
+				additional common-sense choices for the data.
+			</p>
+			<p>
+				Despite these design efforts, my visualization does obscure and/or ineffectively represent some aspects
+				of the data. Firstly, comparison between gender is difficult. As we discussed in lecture, humans are
+				not very good at comparing bar lengths with separate x-axes, which the reader is forced to do for
+				comparing male and female bars. I accepted this as a "flaw" because I decided to focus on age, rather
+				than gender, for my visualization.
+				The second issue is that the x-axis scale between the facets are
+				different.
+				This means that, if the reader is not careful, they may not realize that the bars on the right actually
+				represent approximately 2.5x more people than the bars on the left, reflecting the large overall
+				increase in the US population. I also accepted this as a "flaw" because I again wanted to focus on the
+				change in the population <em>distribution</em>, not the absolute population numbers. Using a different
+				scale for the x-axis enables the quick <em>relative</em> observations aforementioned.
+			</p>
+
+
+			<h3>Reflection</h3>
+
+			<p>
+				Sketching definitely helped me brainstorm for the final design. Coming in, I knew that a
+				population pyramid like sketch 1 would probably be the most effective, and sketch 1 definitely
+				reinforced to me its effectiveness. However, my initial population
+				pyramid sketch also helped me notice some flaws in the design, such as the difficulty in making relative
+				comparisons between 1900 and 2000, as well as the ineffective representation of differences between
+				gender. The heatmap was an attempt to address both of these issues, but ultimately lost too much of the
+				original
+				information and readability. It helped me realize that I ought to redirect my motivating question on age
+				rather than
+				trying to tackle both on age and gender together. Finally, the radial pie chart gave me insights into
+				how I should make
+				relative comparisons in the population distribution from 1900 to 2000 easy. It led me to realize that,
+				while I wanted to use a normalized, shared scale for both the 1900 and 2000 distributions,
+				plotting them on top of each other was not the most effective choice. Ultimately, these observations led
+				me to my final visualization, where I kept most of the aspects from sketch 1, but faceted the pyramid
+				temporally due to my observations from my additional sketches.
+			</p>
+		</section>
+	</main>
+</body>
+
+</html>
