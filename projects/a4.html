@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 4</small>
+			Persuasive or Deceptive Visualization?
+		</h1>
+
+		<p>
+			<strong>Jerry Li</strong> — <em>jerryli@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+		<h2>Proposition: Global temperatures are continuing to rise at a high, unabated rate, with no evidence of
+			slowing down.</h2>
+
+		<section>
+			<h3>FOR the Proposition</h3>
+
+			<figure>
+				<img src="a4_images/vis2.png" alt="" />
+				<figcaption>
+					My visualization which agues that global temperatures are continuing to rise.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li>For this visualization, one of my persuasive design choices was in rescaling the y-axis. The
+					raw data provides changes in temperature relative to the <b>1951-1980</b> baseline. However, when I
+					left
+					the data unmodified, few of the bars are negative, and there doesn't feel to be a real "uh-oh"
+					impact to the reader - the trend is just upward throughout. I noted that the temperature baseline -
+					aka the "zero point" - is a somewhat arbitrary choice. Hence, by computing the 1961-1990 mean
+					and
+					readjusting the data to be based on a new, higher baseline, there is now a swing from negative bars
+					to positive ones. By combining this graphical inversion with appropriately colored bars, the upward
+					trend
+					to me feels much more pressing. I'd score this 1.5 on the deceptiveness scale, as I feel that the
+					zero
+					point is a choice that must be made, and it doesn't really mislead the reader in an excessive way.
+				</li>
+				<li>There are two other design choices which I'll combine together here, because they have a somewhat
+					similar effect. The first is the coloring of the bars, and the second is the choice to include a
+					moving average. Note that in both cases, the information being provided is a bit redundant. The
+					colors tell the same story as the bar lengths, and the moving average can be "imagined" by the
+					reader. However, I nonetheless feel that these are effective visual encodings because they more
+					easily allow the
+					reader to comprehend the trend. The colors are chosen, of course, according to a conventional scale
+					of cold to hot, so the change from deep blue to deep red drives home the global warming message.
+					Meanwhile, since the variance in annual temperatures is high, the moving average makes the trend
+					easier to see, and also offers a comparison for the projection described below. I'd score both of
+					these choices 2 on the deceptiveness scale - there is no deceptive intent here.</li>
+				<li>Another design choice was to augment the original data with a projection of global temperatures made
+					by the Intergovernmental Panel on Climate Change (IPCC) in 1990. To drive home the point made in the
+					title ("alarming rate") I felt that there needed to be something more than just an increasing series
+					of bars. What would make it more "alarming" is if the increase were exceeding previous projections;
+					hence, I included a reference line for the projected temperature increase from 1990 onward. There
+					are two minor sources of potential deception here. First, the projection did call for a 0.3°C rise
+					per decade, but admitted a large uncertainty range: 0.2°C to 0.5°C per decade. The means that the
+					actual rise in temperature isn't meaningfully greater than originally hypothesized. The second is
+					more subtle: I think it's a bit unfair to be able to pick an arbitrary projection ex post facto,
+					since I'd
+					only choose to include a projection that underestimated temperatures. For these reasons, I'd score
+					this design choice a -0.5 in deceptiveness.
+				</li>
+				<li>Finally, a minor choice to mention is the aspect ratio, which, as discussed in lecture, can make a
+					big impact on the perception of the data. In this case, I pushed the guideline only slightly,
+					banking the trend to (approximately) just over 45 degrees. I'd score this -0.5 in terms of
+					deceptiveness.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>AGAINST the Proposition</h3>
+
+			<figure>
+				<img src="a4_images/animated_vis.gif" alt="" />
+				<figcaption>
+					My animated visualization which argues that global temperatures are no longer on the increase.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="a4_images/out5.png" alt="" />
+				<figcaption>
+					The static version of the same visualization.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Decisions and Rationale:
+			</p>
+
+			<ul>
+				<li>The key persuasive - and admittedly deceptive - design choice in this visualization was to divide
+					the data into
+					8-year cycles. The purpose of this, of course, was to try to emphasize a "trend" in the data which
+					occurred by pure chance, while downplaying and obfuscating the overall, genuine trend. I made this
+					design
+					choice because, while initially exploring the data, I realized that - purely due to variance - the
+					global temperatures in 2007 and 2015 were abnormally high. Hence, I realized that, by plotting
+					temperatures in 8-year periods relative to the first year in each period, I could conveniently
+					portray the most recent periods (2007-2014 and 2015-2022) as actually having seen decreases in
+					temperature, while previous periods were increasing. Of course, this is deceptive for two critical
+					reasons: first, it cherry picks specific years to manufacture the trend. Second, the plot now has an
+					"off-by-one" error in the sense that the changes from 2014-2015, 2006-2007, etc. are never
+					visualized. But, if I could conveniently explain why I chose 8-year cycles, I felt that this
+					deception could potentially fly under the radar for some readers, especially since using cycles is a
+					common way to adjust for seasonality. Hence, this design choice scores a -2 for deceptiveness.</li>
+				<li>The next design choice is a follow-up to the previous: I needed a way to explain why I chose 8-year
+					cycles. I decided to explain it away using El Niño/La Niña, which is a legitimate weather phenomena
+					affecting global temperatures
+					occuring in cycles of between 1 and 8 years. I decided to explicitly mention this in the subtitle as
+					well as citing a (again legitimate) source explaining the cyclical nature of El Niño/La Niña. Of
+					course, while citing sources is an earnest design technique, the way I did so was purely deceptive,
+					again earning a score of -2.</li>
+				<li>Another critical design choice was to use an animated, rather than static, visualization for maximum
+					persuasiveness. I think the animation is much more persuasive because the reader can clearly see the
+					lines one at a time, realizing that the last two are lower than the others. Delineating the trend
+					<em>over time (i.e. between different cycles)</em> is more difficult in the static visualization
+					shown. A related design choice was the color scheme, with more recent lines shown in a darker blue.
+					While the colors themselves do not encode anything about the temperatures, they may subconsciously
+					hint to the reader of a cooling trend due to the deeper and deeper blue hues. I'd score the choice
+					of using an animation a 2 in terms of deceptiveness - the deceptiveness of the graph as a whole
+					aside, using animation is a completely valid mechanism to make my point - and the choice of colors a
+					1.
+				</li>
+				<li>Finally, there were a couple other very minor (but conscious) design choices. Note that the y-axis
+					is just slightly asymmetric, with a range of -0.5 to 0.6. Additionally, note that I emphasized the
+					zero-point on the y-axis grid. Both of these choices make the "anomalous" 2007-2014 and 2015-2022
+					periods
+					look more different from the rest, further persuading the reader that indeed, things are changing
+					and temperatures are no
+					longer rising in recent years. I'd score these choices a 2 in terms of deceptiveness as they are
+					completely valid, conventional design decisions which do not really mislead the reader but only
+					serve to emphasize my message.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Final Reflection</h2>
+			<p>Overall, I felt that this was a very interesting exercise in data visualization, as I've never thought
+				about how to use deceptive design choices before. In the choice of my specific dataset and proposition,
+				I was forced to challenge myself to come up with novel persuasive methods, since there is only one
+				logical interpretation
+				and trend in the data (well, to most people). Hence, while I found it fairly straightforward to make a
+				visualization supporting my proposition (generally, drawing from past experience and knowledge of
+				conventional techniques was sufficient), it was of course much more difficult to manufacture a trend
+				where there was none in order to argue the opposing side. Nonetheless, I was suprised that it's actually
+				very possible to distort the data (even without egregious lies/errors) to say what you want it to say.
+			</p>
+			<p>
+				While I am still not sure I can draw solid bounds between acceptable persuasive choices and misleading
+				ones, one thing that I noticed through the course of doing this assignment is that, when trying to
+				persuade in earnest, design
+				choices came naturally and logically from the trends I observed. In constrast, when trying to deceive, I
+				had to wrangle the data to fit my predispositions and make forced design decisions. So, to me,
+				misleading choices can be identified by the following assertion: when the data is being led by the
+				author rather than the author being led by the data. Admittedly, this assertion is somewhat idealistic
+				and difficult to distinguish in practice, but this reflects the blurry lines of reality. Nevertheless, I
+				feel that this assignment and reflection may better help me identify when others - or even myself -
+				start crossing the line into deceptive design choices.
+			</p>
+		</section>
+	</main>
+</body>
+
+</html>
